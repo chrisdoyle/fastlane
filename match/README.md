@@ -102,7 +102,34 @@ sudo gem install fastlane
 
 Make sure you have the latest version of the Xcode command line tools installed:
 
-    xcode-select --install
+```
+xcode-select -p
+```
+
+If you see:
+
+```
+/Applications/Xcode.app/Contents/Developer
+```
+
+then you already have the Xcode command line tools installed. Otherwise, install them:
+
+```
+xcode-select --install
+```
+
+If you already have the Xcode command line tools installed, you can use the ```softwareupdate``` tool to determine if an update is available:
+
+```
+softwareupdate --list
+```
+If an update is available, install it:
+
+```
+softwareupdate --install <PRODUCT NAME>
+```
+
+where ```<PRODUCT NAME>``` may be obtained using the aforementioned ```--list``` command.
 
 ## Usage
 
